@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="login-form">
+                <img src="image.png" class="logo">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="email" id="username" name="username" placeholder="Enter Username" required>
+                    <span id="username-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    <span id="password-error"></span>
+                </div>
+                <button type="submit">Login</button>
+                <a href="mailto:support@smartserv.io?subject=Password-Reset & body= Sending the mail as a request to change my password" class="forgot-password">Forgot your password?</a>
+            </form>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DashBoard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" href="dashboard.css"></head>
+<body>
+    <h1>Company Metrics</h1>
+  <div class="container">
+    <div class="card">
+        <h2>Total Revenue</h2>
+        <p>$406,411.29</p>
+    </div>
+    <div class="card">
+        <h2>Total Jobs Avg</h2>
+        <p>$620</p>
+    </div>
+    <div class="card">
+        <h2>Tickets Created</h2>
+        <p>655</p>
+    </div>
+    <div class="card">
+        <h2>Tickets Scheduled</h2>
+        <p>735</p>
+    </div>
+    <div class="card">
+        <h2>Outstanding Amount</h2>
+        <p>$110,448.8</p>
+    </div>
+    <div class="card">
+        <h2>Membership Sold</h2>
+        <p>105</p>
+    </div>
+    <div class="card">
+        <h2>Jobs Completed</h2>
+        <p>436</p>
+    </div>
+    <div class="card">
+        <h2>Total Canceled</h2>
+        <p>65</p>
+    </div>
+  </div>
+  <div class="graph-container">
+    <div class="graph">
+        <canvas id="graph1" width="400" height="200"></canvas>
+
+    </div>
+    <div class="graph">
+        <canvas id="graph2" width="400" height="200"></canvas>
+
+    </div>
+  </div>
+  <script>
+    var data1 ={
+        labels:['Edmonds','Mulkilteo','Bothell','Lynnwood','Seattle','Everett'],
+        datasets:[{
+            label:'Revenue for November 2019',
+            data:[5000,10000,15000,20000,25000,30000,35000,40000,45000,50000,55000,60000],
+            backgroundColor:'rgba(6, 221, 6, 0.3)'
+        }]
+    };
+    var data2 ={
+        labels:['Material sale','Maintanence','HWT replacememt','Bid work plumbing','Service HVAC','Bid work HVAC','Service Plumbing'],
+        datasets:[{
+            label:'Revenue for November 2019',
+            data:[0,20000,40000,60000,80000,100000,120000,140000,160000,180000,200000],
+            backgroundColor:'rgba(6, 221, 6, 0.3)'
+        }]
+    };
+
+    const ctx1= document.getElementById("graph1").getContext('2d');
+    const ctx2= document.getElementById("graph2").getContext('2d');
+
+    const chart1=new Chart(ctx1,{
+        type:'bar',
+        data:data1
+    });
+    const chart2=new Chart(ctx2,{
+        type:'bar',
+        data:data2
+    });
+  </script>
+</body>
+</html>
