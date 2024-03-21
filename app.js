@@ -11,13 +11,13 @@ form.addEventListener('submit', (event) => {
     const usernameRegex = /^[a-zA-Z0-9_.@]+$/;
     if (usernameRegex.test(usernameInput.value)) {
         usernameValid = true;
-        usernameError.textContent = ''; // Clear any previous error message
+        usernameError.textContent = ''; 
     } else {
         usernameValid = false;
         usernameError.textContent = 'Username must only contain letters, numbers, and underscores';
     }
 
-    // Password Validation - Must contain at least one upperase letter, one number, and no special characters other than "@"
+
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*@)[a-zA-Z\d@]+$/;
     if (passwordRegex.test(passwordInput.value)) {
         passwordValid = true;
